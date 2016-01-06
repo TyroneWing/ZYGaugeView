@@ -15,6 +15,7 @@
 		195AF2291C3D16E000B165CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195AF2271C3D16E000B165CA /* LaunchScreen.storyboard */; };
 		195AF2341C3D16E000B165CA /* ZYGaugeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF2331C3D16E000B165CA /* ZYGaugeViewTests.m */; };
 		195AF23F1C3D16E000B165CA /* ZYGaugeViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */; };
+		195AF24E1C3D170400B165CA /* GaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF24D1C3D170400B165CA /* GaugeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		195AF23A1C3D16E000B165CA /* ZYGaugeViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYGaugeViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYGaugeViewUITests.m; sourceTree = "<group>"; };
 		195AF2401C3D16E000B165CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195AF24C1C3D170400B165CA /* GaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeView.h; sourceTree = "<group>"; };
+		195AF24D1C3D170400B165CA /* GaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,8 @@
 		195AF2181C3D16DF00B165CA /* ZYGaugeView */ = {
 			isa = PBXGroup;
 			children = (
+				195AF24C1C3D170400B165CA /* GaugeView.h */,
+				195AF24D1C3D170400B165CA /* GaugeView.m */,
 				195AF21C1C3D16DF00B165CA /* AppDelegate.h */,
 				195AF21D1C3D16DF00B165CA /* AppDelegate.m */,
 				195AF21F1C3D16DF00B165CA /* ViewController.h */,
@@ -272,6 +277,7 @@
 			files = (
 				195AF2211C3D16DF00B165CA /* ViewController.m in Sources */,
 				195AF21E1C3D16DF00B165CA /* AppDelegate.m in Sources */,
+				195AF24E1C3D170400B165CA /* GaugeView.m in Sources */,
 				195AF21B1C3D16DF00B165CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +420,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZYGaugeView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -425,6 +432,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = ZYGaugeView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
