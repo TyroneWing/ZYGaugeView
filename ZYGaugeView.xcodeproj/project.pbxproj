@@ -1,0 +1,521 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		195AF21B1C3D16DF00B165CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF21A1C3D16DF00B165CA /* main.m */; };
+		195AF21E1C3D16DF00B165CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF21D1C3D16DF00B165CA /* AppDelegate.m */; };
+		195AF2211C3D16DF00B165CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF2201C3D16DF00B165CA /* ViewController.m */; };
+		195AF2241C3D16E000B165CA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195AF2221C3D16E000B165CA /* Main.storyboard */; };
+		195AF2261C3D16E000B165CA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195AF2251C3D16E000B165CA /* Assets.xcassets */; };
+		195AF2291C3D16E000B165CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195AF2271C3D16E000B165CA /* LaunchScreen.storyboard */; };
+		195AF2341C3D16E000B165CA /* ZYGaugeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF2331C3D16E000B165CA /* ZYGaugeViewTests.m */; };
+		195AF23F1C3D16E000B165CA /* ZYGaugeViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		195AF2301C3D16E000B165CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 195AF20E1C3D16DF00B165CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 195AF2151C3D16DF00B165CA;
+			remoteInfo = ZYGaugeView;
+		};
+		195AF23B1C3D16E000B165CA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 195AF20E1C3D16DF00B165CA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 195AF2151C3D16DF00B165CA;
+			remoteInfo = ZYGaugeView;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		195AF2161C3D16DF00B165CA /* ZYGaugeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYGaugeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		195AF21A1C3D16DF00B165CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		195AF21C1C3D16DF00B165CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		195AF21D1C3D16DF00B165CA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		195AF21F1C3D16DF00B165CA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		195AF2201C3D16DF00B165CA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		195AF2231C3D16E000B165CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		195AF2251C3D16E000B165CA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		195AF2281C3D16E000B165CA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		195AF22A1C3D16E000B165CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195AF22F1C3D16E000B165CA /* ZYGaugeViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYGaugeViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		195AF2331C3D16E000B165CA /* ZYGaugeViewTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYGaugeViewTests.m; sourceTree = "<group>"; };
+		195AF2351C3D16E000B165CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195AF23A1C3D16E000B165CA /* ZYGaugeViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYGaugeViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYGaugeViewUITests.m; sourceTree = "<group>"; };
+		195AF2401C3D16E000B165CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		195AF2131C3D16DF00B165CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195AF22C1C3D16E000B165CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195AF2371C3D16E000B165CA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195AF20D1C3D16DF00B165CA = {
+			isa = PBXGroup;
+			children = (
+				195AF2181C3D16DF00B165CA /* ZYGaugeView */,
+				195AF2321C3D16E000B165CA /* ZYGaugeViewTests */,
+				195AF23D1C3D16E000B165CA /* ZYGaugeViewUITests */,
+				195AF2171C3D16DF00B165CA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		195AF2171C3D16DF00B165CA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				195AF2161C3D16DF00B165CA /* ZYGaugeView.app */,
+				195AF22F1C3D16E000B165CA /* ZYGaugeViewTests.xctest */,
+				195AF23A1C3D16E000B165CA /* ZYGaugeViewUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		195AF2181C3D16DF00B165CA /* ZYGaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				195AF21C1C3D16DF00B165CA /* AppDelegate.h */,
+				195AF21D1C3D16DF00B165CA /* AppDelegate.m */,
+				195AF21F1C3D16DF00B165CA /* ViewController.h */,
+				195AF2201C3D16DF00B165CA /* ViewController.m */,
+				195AF2221C3D16E000B165CA /* Main.storyboard */,
+				195AF2251C3D16E000B165CA /* Assets.xcassets */,
+				195AF2271C3D16E000B165CA /* LaunchScreen.storyboard */,
+				195AF22A1C3D16E000B165CA /* Info.plist */,
+				195AF2191C3D16DF00B165CA /* Supporting Files */,
+			);
+			path = ZYGaugeView;
+			sourceTree = "<group>";
+		};
+		195AF2191C3D16DF00B165CA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				195AF21A1C3D16DF00B165CA /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		195AF2321C3D16E000B165CA /* ZYGaugeViewTests */ = {
+			isa = PBXGroup;
+			children = (
+				195AF2331C3D16E000B165CA /* ZYGaugeViewTests.m */,
+				195AF2351C3D16E000B165CA /* Info.plist */,
+			);
+			path = ZYGaugeViewTests;
+			sourceTree = "<group>";
+		};
+		195AF23D1C3D16E000B165CA /* ZYGaugeViewUITests */ = {
+			isa = PBXGroup;
+			children = (
+				195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */,
+				195AF2401C3D16E000B165CA /* Info.plist */,
+			);
+			path = ZYGaugeViewUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		195AF2151C3D16DF00B165CA /* ZYGaugeView */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 195AF2431C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeView" */;
+			buildPhases = (
+				195AF2121C3D16DF00B165CA /* Sources */,
+				195AF2131C3D16DF00B165CA /* Frameworks */,
+				195AF2141C3D16DF00B165CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ZYGaugeView;
+			productName = ZYGaugeView;
+			productReference = 195AF2161C3D16DF00B165CA /* ZYGaugeView.app */;
+			productType = "com.apple.product-type.application";
+		};
+		195AF22E1C3D16E000B165CA /* ZYGaugeViewTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 195AF2461C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeViewTests" */;
+			buildPhases = (
+				195AF22B1C3D16E000B165CA /* Sources */,
+				195AF22C1C3D16E000B165CA /* Frameworks */,
+				195AF22D1C3D16E000B165CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				195AF2311C3D16E000B165CA /* PBXTargetDependency */,
+			);
+			name = ZYGaugeViewTests;
+			productName = ZYGaugeViewTests;
+			productReference = 195AF22F1C3D16E000B165CA /* ZYGaugeViewTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		195AF2391C3D16E000B165CA /* ZYGaugeViewUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 195AF2491C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeViewUITests" */;
+			buildPhases = (
+				195AF2361C3D16E000B165CA /* Sources */,
+				195AF2371C3D16E000B165CA /* Frameworks */,
+				195AF2381C3D16E000B165CA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				195AF23C1C3D16E000B165CA /* PBXTargetDependency */,
+			);
+			name = ZYGaugeViewUITests;
+			productName = ZYGaugeViewUITests;
+			productReference = 195AF23A1C3D16E000B165CA /* ZYGaugeViewUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		195AF20E1C3D16DF00B165CA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = yi;
+				TargetAttributes = {
+					195AF2151C3D16DF00B165CA = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					195AF22E1C3D16E000B165CA = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 195AF2151C3D16DF00B165CA;
+					};
+					195AF2391C3D16E000B165CA = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 195AF2151C3D16DF00B165CA;
+					};
+				};
+			};
+			buildConfigurationList = 195AF2111C3D16DF00B165CA /* Build configuration list for PBXProject "ZYGaugeView" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 195AF20D1C3D16DF00B165CA;
+			productRefGroup = 195AF2171C3D16DF00B165CA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				195AF2151C3D16DF00B165CA /* ZYGaugeView */,
+				195AF22E1C3D16E000B165CA /* ZYGaugeViewTests */,
+				195AF2391C3D16E000B165CA /* ZYGaugeViewUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		195AF2141C3D16DF00B165CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195AF2291C3D16E000B165CA /* LaunchScreen.storyboard in Resources */,
+				195AF2261C3D16E000B165CA /* Assets.xcassets in Resources */,
+				195AF2241C3D16E000B165CA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195AF22D1C3D16E000B165CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195AF2381C3D16E000B165CA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		195AF2121C3D16DF00B165CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195AF2211C3D16DF00B165CA /* ViewController.m in Sources */,
+				195AF21E1C3D16DF00B165CA /* AppDelegate.m in Sources */,
+				195AF21B1C3D16DF00B165CA /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195AF22B1C3D16E000B165CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195AF2341C3D16E000B165CA /* ZYGaugeViewTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195AF2361C3D16E000B165CA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195AF23F1C3D16E000B165CA /* ZYGaugeViewUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		195AF2311C3D16E000B165CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 195AF2151C3D16DF00B165CA /* ZYGaugeView */;
+			targetProxy = 195AF2301C3D16E000B165CA /* PBXContainerItemProxy */;
+		};
+		195AF23C1C3D16E000B165CA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 195AF2151C3D16DF00B165CA /* ZYGaugeView */;
+			targetProxy = 195AF23B1C3D16E000B165CA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		195AF2221C3D16E000B165CA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				195AF2231C3D16E000B165CA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		195AF2271C3D16E000B165CA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				195AF2281C3D16E000B165CA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		195AF2411C3D16E000B165CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		195AF2421C3D16E000B165CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		195AF2441C3D16E000B165CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZYGaugeView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		195AF2451C3D16E000B165CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = ZYGaugeView/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeView;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		195AF2471C3D16E000B165CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYGaugeViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYGaugeView.app/ZYGaugeView";
+			};
+			name = Debug;
+		};
+		195AF2481C3D16E000B165CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = ZYGaugeViewTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeViewTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ZYGaugeView.app/ZYGaugeView";
+			};
+			name = Release;
+		};
+		195AF24A1C3D16E000B165CA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYGaugeViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYGaugeView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		195AF24B1C3D16E000B165CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = ZYGaugeViewUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.tinckay.ZYGaugeViewUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = ZYGaugeView;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		195AF2111C3D16DF00B165CA /* Build configuration list for PBXProject "ZYGaugeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				195AF2411C3D16E000B165CA /* Debug */,
+				195AF2421C3D16E000B165CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		195AF2431C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				195AF2441C3D16E000B165CA /* Debug */,
+				195AF2451C3D16E000B165CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		195AF2461C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeViewTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				195AF2471C3D16E000B165CA /* Debug */,
+				195AF2481C3D16E000B165CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		195AF2491C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeViewUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				195AF24A1C3D16E000B165CA /* Debug */,
+				195AF24B1C3D16E000B165CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 195AF20E1C3D16DF00B165CA /* Project object */;
+}
