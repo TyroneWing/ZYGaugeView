@@ -1,6 +1,5 @@
 //
 //  GaugeView.m
-//  Test
 //
 //  Created by yi on 16/1/5.
 //  Copyright © 2016年 yi. All rights reserved.
@@ -21,10 +20,7 @@
 @interface GaugeView ()
 {
     CALayer *rootNeedleLayer;
-
 }
-
-
 
 @end
 
@@ -76,7 +72,6 @@
 }
 
 
-
 - (CGFloat)needleAngleForValue:(double)value
 {
     return DEGREES_TO_RADIANS(_startAngle + (value - _minValue) / (_maxValue - _minValue) * (_endAngle - _startAngle));
@@ -93,22 +88,21 @@
     CGContextSaveGState(context);
     CGContextSetShadow(context, CGSizeMake(0.0, 0.0), 0.0);
   
-    //start
+    //start圆弧
     UIBezierPath *path = [UIBezierPath bezierPath];
     [path addArcWithCenter:CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2) radius:self.bounds.size.width/2 -_lineWidth/2-30 startAngle:DEGREES_TO_RADIANS(_startAngle - 8)  endAngle:[self needleAngleForValue:self.value]  clockwise:YES];
-    UIColor *color = _startColor;
+    UIColor *color = (_value == _minValue?_endColor:_startColor);
     [color setStroke];
     path.lineWidth = self.lineWidth;
     [path stroke];
 
-    //end
+    //end圆弧
     UIBezierPath *path2 = [UIBezierPath bezierPath];
     [path2 addArcWithCenter:CGPointMake(self.bounds.size.width/2, self.bounds.size.height/2) radius:self.bounds.size.width/2 -_lineWidth/2-30 startAngle:[self needleAngleForValue:self.value]  endAngle:DEGREES_TO_RADIANS(_endAngle + 8)  clockwise:YES];
-    UIColor *color2 = _endColor;
+    UIColor *color2 = (_value == _maxValue?_startColor:_endColor);
     [color2 setStroke];
     path2.lineWidth = self.lineWidth;
     [path2 stroke];
-    
     
     //外环
     UIBezierPath *path3 = [UIBezierPath bezierPath];
@@ -117,7 +111,6 @@
     [color3 setStroke];
     path3.lineWidth = 2;
     [path3 stroke];
-    
     
     //内圆
     UIBezierPath *path4 = [UIBezierPath bezierPath];
@@ -134,15 +127,12 @@
     [color5 setStroke];
     path5.lineWidth = 1;
     [path5 stroke];
-    
-    
 
+    //刻度
     [self drawDail:context];
     
+    //指针
     [self drawPointer:context];
-    
-
-    
 }
 
 /**
@@ -153,11 +143,10 @@
     CGFloat cenx = CGRectGetMidX(self.bounds);
     CGFloat ceny = CGRectGetMidY(self.bounds);
     [self rotateContext:context fromCenter:CGPointMake(cenx, ceny) withAngle:[self needleAngleDEGREES:_value]];
-    //画指针
-    CGContextSetStrokeColorWithColor(context, RGB(201,222,238).CGColor);//线条颜色
-    CGContextSetLineWidth(context, 2.0);//线条宽度
-    CGContextMoveToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+20); //开始画线, x，y 为开始点的坐标
-    CGContextAddLineToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+50);//画直线, x，y 为线条结束点的坐标
+    CGContextSetStrokeColorWithColor(context, RGB(201,222,238).CGColor);
+    CGContextSetLineWidth(context, 2.0);
+    CGContextMoveToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+20);
+    CGContextAddLineToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+50);
     CGContextStrokePath(context);
 }
 
@@ -167,29 +156,26 @@
 - (void)drawDail:(CGContextRef)context
 {
     CGFloat allAngle = 0.0;
-    //刻度
     CGFloat cenx = CGRectGetMidX(self.bounds);
     CGFloat ceny = CGRectGetMidY(self.bounds);
     [self rotateContext:context fromCenter:CGPointMake(cenx, ceny) withAngle:DEGREES_TO_RADIANS(_startAngle+90)];
     for(int i = 0; i < (_count+1); i++)
     {
-        //画一条线
-        CGContextSetStrokeColorWithColor(context, RGB(201,222,238).CGColor);//线条颜色
-        CGContextSetLineWidth(context, 2.0);//线条宽度
-        CGContextMoveToPoint(context, self.bounds.size.width/2, 16); //开始画线, x，y 为开始点的坐标
-        CGContextAddLineToPoint(context, self.bounds.size.width/2, 25);//画直线, x，y 为线条结束点的坐标
-        CGContextStrokePath(context);
-        
+        //画一条刻度线
+        CGContextSetStrokeColorWithColor(context, RGB(201,222,238).CGColor);
+        CGContextSetLineWidth(context, 2.0);
+        CGContextMoveToPoint(context, self.bounds.size.width/2, 16);
+        CGContextAddLineToPoint(context, self.bounds.size.width/2, 25);        CGContextStrokePath(context);
         NSString *valueString = [NSString stringWithFormat:@"%.0f",_minValue+i*((_maxValue-_minValue)/_count)];
-        UIFont* font = [UIFont fontWithName:@"Helvetica-Bold" size:12];
-        NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : [UIColor whiteColor] };
+        UIFont* font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
+        UIColor *numColor =  (_minValue+i*((_maxValue-_minValue)/_count)<=_value?_startColor:_endColor);
+        NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : numColor};
         NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:valueString attributes:stringAttrs];
         CGSize fontWidth = [valueString sizeWithAttributes:stringAttrs];
         [attrStr drawAtPoint:CGPointMake(self.bounds.size.width/2 - fontWidth.width / 2.0,  0)];
-        
+        //旋转角度
         [self rotateContext:context fromCenter:CGPointMake(cenx, ceny) withAngle:DEGREES((_endAngle-_startAngle)/_count)];
     }
-    
     //旋转了角度，画完刻度需要将坐标旋转回初始状态
     allAngle = DEGREES((_endAngle-_startAngle)/_count)*(_count+1);
     [self rotateContext:context fromCenter:CGPointMake(cenx, ceny) withAngle:-DEGREES_TO_RADIANS(_startAngle+90)];

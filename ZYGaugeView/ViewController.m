@@ -31,11 +31,11 @@
     //结束角度
     gauV.endAngle = 300;
     //刻度线数目
-    gauV.count = 10;
+    gauV.count = 8;
     
-    gauV.maxValue = 110;
+    gauV.maxValue = 90;
     gauV.minValue = 10;
-    gauV.value = 50;
+    gauV.value = 60;
     [self.view addSubview:gauV];
     
     UISlider *slide = [[UISlider alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-250)/2, 300, 250, 50)];
