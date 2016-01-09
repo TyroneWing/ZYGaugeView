@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		191FF5141C40AB32009662D5 /* GaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 191FF5131C40AB32009662D5 /* GaugeView.m */; };
+		191FF5161C40AB36009662D5 /* design.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 191FF5151C40AB36009662D5 /* design.jpg */; };
+		191FF5181C40D68C009662D5 /* gauge.gif in Resources */ = {isa = PBXBuildFile; fileRef = 191FF5171C40D68C009662D5 /* gauge.gif */; };
 		195AF21B1C3D16DF00B165CA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF21A1C3D16DF00B165CA /* main.m */; };
 		195AF21E1C3D16DF00B165CA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF21D1C3D16DF00B165CA /* AppDelegate.m */; };
 		195AF2211C3D16DF00B165CA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF2201C3D16DF00B165CA /* ViewController.m */; };
@@ -15,7 +18,6 @@
 		195AF2291C3D16E000B165CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195AF2271C3D16E000B165CA /* LaunchScreen.storyboard */; };
 		195AF2341C3D16E000B165CA /* ZYGaugeViewTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF2331C3D16E000B165CA /* ZYGaugeViewTests.m */; };
 		195AF23F1C3D16E000B165CA /* ZYGaugeViewUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */; };
-		195AF24E1C3D170400B165CA /* GaugeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 195AF24D1C3D170400B165CA /* GaugeView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		191FF5121C40AB32009662D5 /* GaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeView.h; sourceTree = "<group>"; };
+		191FF5131C40AB32009662D5 /* GaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeView.m; sourceTree = "<group>"; };
+		191FF5151C40AB36009662D5 /* design.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = design.jpg; sourceTree = "<group>"; };
+		191FF5171C40D68C009662D5 /* gauge.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = gauge.gif; sourceTree = "<group>"; };
 		195AF2161C3D16DF00B165CA /* ZYGaugeView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZYGaugeView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195AF21A1C3D16DF00B165CA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		195AF21C1C3D16DF00B165CA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -52,8 +58,6 @@
 		195AF23A1C3D16E000B165CA /* ZYGaugeViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ZYGaugeViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		195AF23E1C3D16E000B165CA /* ZYGaugeViewUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZYGaugeViewUITests.m; sourceTree = "<group>"; };
 		195AF2401C3D16E000B165CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		195AF24C1C3D170400B165CA /* GaugeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GaugeView.h; sourceTree = "<group>"; };
-		195AF24D1C3D170400B165CA /* GaugeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GaugeView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +85,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		191FF5111C40AB32009662D5 /* GaugeView */ = {
+			isa = PBXGroup;
+			children = (
+				191FF5121C40AB32009662D5 /* GaugeView.h */,
+				191FF5131C40AB32009662D5 /* GaugeView.m */,
+			);
+			path = GaugeView;
+			sourceTree = "<group>";
+		};
 		195AF20D1C3D16DF00B165CA = {
 			isa = PBXGroup;
 			children = (
@@ -104,8 +117,9 @@
 		195AF2181C3D16DF00B165CA /* ZYGaugeView */ = {
 			isa = PBXGroup;
 			children = (
-				195AF24C1C3D170400B165CA /* GaugeView.h */,
-				195AF24D1C3D170400B165CA /* GaugeView.m */,
+				191FF5151C40AB36009662D5 /* design.jpg */,
+				191FF5171C40D68C009662D5 /* gauge.gif */,
+				191FF5111C40AB32009662D5 /* GaugeView */,
 				195AF21C1C3D16DF00B165CA /* AppDelegate.h */,
 				195AF21D1C3D16DF00B165CA /* AppDelegate.m */,
 				195AF21F1C3D16DF00B165CA /* ViewController.h */,
@@ -248,9 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				191FF5181C40D68C009662D5 /* gauge.gif in Resources */,
 				195AF2291C3D16E000B165CA /* LaunchScreen.storyboard in Resources */,
 				195AF2261C3D16E000B165CA /* Assets.xcassets in Resources */,
 				195AF2241C3D16E000B165CA /* Main.storyboard in Resources */,
+				191FF5161C40AB36009662D5 /* design.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -277,7 +293,7 @@
 			files = (
 				195AF2211C3D16DF00B165CA /* ViewController.m in Sources */,
 				195AF21E1C3D16DF00B165CA /* AppDelegate.m in Sources */,
-				195AF24E1C3D170400B165CA /* GaugeView.m in Sources */,
+				191FF5141C40AB32009662D5 /* GaugeView.m in Sources */,
 				195AF21B1C3D16DF00B165CA /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -506,6 +522,7 @@
 				195AF2451C3D16E000B165CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		195AF2461C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeViewTests" */ = {
 			isa = XCConfigurationList;
@@ -514,6 +531,7 @@
 				195AF2481C3D16E000B165CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		195AF2491C3D16E000B165CA /* Build configuration list for PBXNativeTarget "ZYGaugeViewUITests" */ = {
 			isa = XCConfigurationList;
@@ -522,6 +540,7 @@
 				195AF24B1C3D16E000B165CA /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

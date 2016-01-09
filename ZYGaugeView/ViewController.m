@@ -24,17 +24,17 @@
     // Do any additional setup after loading the view, typically from a nib.
     self.view.backgroundColor = RGB(116,148,173);
     
-    gauV = [[GaugeView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-250)/2, 50, 250, 250)];
-    gauV.backgroundColor = RGB(116,148,173);
+    gauV = [[GaugeView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-300)/2, 50, 300, 300)];
+//    gauV.backgroundColor = RGB(116,148,173);
     //开始角度
     gauV.startAngle = 60;
     //结束角度
     gauV.endAngle = 300;
     //刻度线数目
-    gauV.count = 8;
+    gauV.count = 10;
     
-    gauV.maxValue = 90;
-    gauV.minValue = 10;
+    gauV.maxValue = 100;
+    gauV.minValue = 0;
     gauV.value = 60;
     [self.view addSubview:gauV];
     

@@ -22,5 +22,7 @@
 @property (nonatomic,assign) CGFloat endAngle;
 //圆弧线宽
 @property (nonatomic,assign) CGFloat lineWidth;
+//底部标志文字
+@property (nonatomic,copy) NSString *buttomString;
 
 @end

@@ -32,6 +32,7 @@
     self = [super initWithFrame:frame];
     if (self)
     {
+        self.backgroundColor = [UIColor clearColor];
         [self initialize];
     }
     return self;
@@ -53,6 +54,7 @@
     _lineWidth = 35;
     _count = 10;
     _startColor = RGB(95,177,237);
+    _buttomString = @"已完成";
     _endColor = [UIColor whiteColor];
 }
 
@@ -67,7 +69,6 @@
 -(void)drawRect:(CGRect)rect
 {
     CGContextRef context = UIGraphicsGetCurrentContext();
-
     [self drawRangeLabels:context];
 }
 
@@ -127,12 +128,34 @@
     [color5 setStroke];
     path5.lineWidth = 1;
     [path5 stroke];
-
+    
+    
+    [self drawBottom:context];
+    
     //刻度
     [self drawDail:context];
     
     //指针
     [self drawPointer:context];
+}
+
+//画底部标识
+- (void)drawBottom:(CGContextRef)context
+{
+    //底部标注
+    UIBezierPath *path6 = [UIBezierPath bezierPathWithRect:CGRectMake((self.bounds.size.width-25)/2, (self.bounds.size.height/2+40), 25, 15)];;
+    UIColor *color6 = _startColor;
+    [color6 setFill];
+    [path6 fill];
+    
+    //底部文字
+    UIFont* font = [UIFont fontWithName:@"Helvetica-Bold" size:15];
+    UIColor *numColor =  [UIColor whiteColor];
+    NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : numColor};
+    NSAttributedString *attrStr = [[NSAttributedString alloc] initWithString:_buttomString attributes:stringAttrs];
+    CGSize fontWidth = [_buttomString sizeWithAttributes:stringAttrs];
+    [attrStr drawAtPoint:CGPointMake(self.bounds.size.width/2 - fontWidth.width / 2.0,  (self.bounds.size.height/2+60))];
+
 }
 
 /**
@@ -144,9 +167,9 @@
     CGFloat ceny = CGRectGetMidY(self.bounds);
     [self rotateContext:context fromCenter:CGPointMake(cenx, ceny) withAngle:[self needleAngleDEGREES:_value]];
     CGContextSetStrokeColorWithColor(context, RGB(201,222,238).CGColor);
-    CGContextSetLineWidth(context, 2.0);
-    CGContextMoveToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+20);
-    CGContextAddLineToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+50);
+    CGContextSetLineWidth(context, 3.0);
+    CGContextMoveToPoint(context, self.bounds.size.width/2, self.bounds.size.height/2+10);
+    CGContextAddLineToPoint(context, self.bounds.size.width/2, self.bounds.size.width -_lineWidth-40);
     CGContextStrokePath(context);
 }
 
@@ -166,13 +189,13 @@
         CGContextSetLineWidth(context, 2.0);
         CGContextMoveToPoint(context, self.bounds.size.width/2, 16);
         CGContextAddLineToPoint(context, self.bounds.size.width/2, 25);        CGContextStrokePath(context);
-        NSString *valueString = [NSString stringWithFormat:@"%.0f",_minValue+i*((_maxValue-_minValue)/_count)];
-        UIFont* font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
-        UIColor *numColor =  (_minValue+i*((_maxValue-_minValue)/_count)<=_value?_startColor:_endColor);
-        NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : numColor};
-        NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:valueString attributes:stringAttrs];
-        CGSize fontWidth = [valueString sizeWithAttributes:stringAttrs];
-        [attrStr drawAtPoint:CGPointMake(self.bounds.size.width/2 - fontWidth.width / 2.0,  0)];
+//        NSString *valueString = [NSString stringWithFormat:@"%.0f",_minValue+i*((_maxValue-_minValue)/_count)];
+//        UIFont* font = [UIFont fontWithName:@"Helvetica-Bold" size:13];
+//        UIColor *numColor =  (_minValue+i*((_maxValue-_minValue)/_count)<=_value?_startColor:_endColor);
+//        NSDictionary* stringAttrs = @{ NSFontAttributeName : font, NSForegroundColorAttributeName : numColor};
+//        NSAttributedString* attrStr = [[NSAttributedString alloc] initWithString:valueString attributes:stringAttrs];
+//        CGSize fontWidth = [valueString sizeWithAttributes:stringAttrs];
+//        [attrStr drawAtPoint:CGPointMake(self.bounds.size.width/2 - fontWidth.width / 2.0,  0)];
         //旋转角度
         [self rotateContext:context fromCenter:CGPointMake(cenx, ceny) withAngle:DEGREES((_endAngle-_startAngle)/_count)];
     }
