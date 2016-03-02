@@ -51,7 +51,7 @@
     _maxValue = 18.0;
     _startAngle = 0.0;
     _endAngle = 270.0;
-    _lineWidth = 35;
+    _lineWidth = 30;
     _count = 10;
     _startColor = RGB(95,177,237);
     _buttomString = @"已完成";
@@ -187,7 +187,7 @@
         //画一条刻度线
         CGContextSetStrokeColorWithColor(context, RGB(201,222,238).CGColor);
         CGContextSetLineWidth(context, 2.0);
-        CGContextMoveToPoint(context, self.bounds.size.width/2, 16);
+        CGContextMoveToPoint(context, self.bounds.size.width/2, 14);
         CGContextAddLineToPoint(context, self.bounds.size.width/2, 25);        CGContextStrokePath(context);
 //        NSString *valueString = [NSString stringWithFormat:@"%.0f",_minValue+i*((_maxValue-_minValue)/_count)];
 //        UIFont* font = [UIFont fontWithName:@"Helvetica-Bold" size:13];

@@ -14,6 +14,7 @@
 {
     GaugeView *gauV;
     UILabel *valueLabel;
+    GaugeView *secGaugeV;
 }
 @end
 
@@ -25,14 +26,12 @@
     self.view.backgroundColor = RGB(116,148,173);
     
     gauV = [[GaugeView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-300)/2, 50, 300, 300)];
-//    gauV.backgroundColor = RGB(116,148,173);
     //开始角度
     gauV.startAngle = 60;
     //结束角度
     gauV.endAngle = 300;
     //刻度线数目
     gauV.count = 10;
-    
     gauV.maxValue = 100;
     gauV.minValue = 0;
     gauV.value = 60;
@@ -46,16 +45,32 @@
     [self.view addSubview:slide];
     
     
-    valueLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-100)/2, 350, 100, 50)];
+    valueLabel = [[UILabel alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-100)/2, 320, 100, 50)];
+    valueLabel.textAlignment = NSTextAlignmentCenter;
     valueLabel.text = [NSString stringWithFormat:@"%.2f",gauV.value];
     [self.view addSubview:valueLabel];
+    
+    secGaugeV = [[GaugeView alloc] initWithFrame:CGRectMake((self.view.bounds.size.width-250)/2, 400, 250, 250)];
+    secGaugeV.startAngle = 60;
+    secGaugeV.endAngle = 270;
+    secGaugeV.count = 12;
+    secGaugeV.maxValue = 140;
+    secGaugeV.minValue = 20;
+    secGaugeV.value = 72;
+    secGaugeV.startColor = [UIColor orangeColor];
+    secGaugeV.endColor = [UIColor grayColor];
+    secGaugeV.lineWidth = 25;
+    secGaugeV.buttomString = @"仪表盘";
+    [self.view addSubview:secGaugeV];
+    
 }
 
 
 - (void)slideChange:(UISlider *)slide
 {
     gauV.value = slide.value;
-    valueLabel.text = [NSString stringWithFormat:@"%.2f",gauV.value];
+    valueLabel.text = [NSString stringWithFormat:@"%.2f%%",gauV.value];
+    secGaugeV.value = slide.value*1.2+20;
 }
 
 
